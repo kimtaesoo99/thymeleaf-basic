@@ -115,6 +115,13 @@ public class BasicController {
         model.addAttribute("users", list);
     }
 
+    @GetMapping("comments")
+    public String comments(Model model){
+        model.addAttribute("data", "Spring!");
+        return "basic/comments";
+    }
+
+
     @Data
     static class User {
         private String username;
